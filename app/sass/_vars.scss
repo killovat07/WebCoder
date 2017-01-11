@@ -1,0 +1,105 @@
+@import "bourbon";
+
+$accent: #ffaf69;
+$accent-dark: #ff9a12;
+$gray: #666;
+$gray-light: #cfcfcf;
+$gray-form: #909090;
+$red: #eeabab;
+$red-form: #ff5953;
+$green-form: #a9d61e;
+$black: #4e4e4e;
+
+a{
+  text-decoration: none;
+}
+
+h2{
+  font-size: em(31px);
+  line-height: 35px;
+  font-weight: 300;
+  margin: 12px 0;
+  color: $black;
+}
+
+.accent-link {
+  display: inline-block;
+  color: $accent;
+  text-decoration: none;
+  transition: .25s ease;
+  vertical-align: top;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $accent;
+    display: block;
+    margin-top: -4px;
+
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    transition: .25s ease;
+  }
+  &:hover {
+    color: darken($accent, 10%);
+    &:after {
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+.hidden{
+  display: none;
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

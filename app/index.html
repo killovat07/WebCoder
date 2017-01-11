@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Web coder test</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <img class="img-responsive" src="img/logo.png" alt="WEBCODER">
+</header>
+
+<section class="top-section">
+
+        <div class="container">
+            <div class="join-us-shadow">
+                <div class="join-us">
+                    <div class="flex-half">
+
+                        <div class="slideshow">
+                            <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                    <img src="img/slider1.jpg" alt="ALT">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="img/slider2.jpg" alt="ALT">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="img/slider3.jpg" alt="ALT">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="img/slider4.jpg" alt="ALT">
+                                </div>
+                            </div>
+
+                            <div class="dots">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                                <span class="dot" onclick="currentSlide(4)"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex-half">
+                        <div id="contactForm">
+                            <form action="#"  method="POST" name="contactForm" class="join-form">
+                                <h1>Join us now. It's FREE</h1>
+
+                                <div class="join-form-radio">
+                                    <label class="main-label">I am</label>
+                                    <div class="switch-field">
+                                        <input type="radio" id="i_women" name="i_am" value="i_women" checked/>
+                                        <label for="i_women" class="switch_left icon-checkbox-women"></label>
+                                        <input type="radio" id="i_men" name="i_am" value="i_men" />
+                                        <label for="i_men" class="switch_right icon-checkbox-man"></label>
+                                    </div>
+
+                                    <label class="main-label looking-for">looking for</label>
+                                    <div class="switch-field">
+                                        <input type="radio" id="looking_women" name="looking_person" value="looking_women" checked/>
+                                        <label for="looking_women" class="switch_left icon-checkbox-women"></label>
+                                        <input type="radio" id="looking_man" name="looking_person" value="looking_man" />
+                                        <label for="looking_man" class="switch_right icon-checkbox-man"></label>
+                                    </div>
+
+                                </div>
+
+                                <div class="join-form-name">
+                                    <div class="has-error">
+                                        <div class="inputContainer">
+                                            <label for="userName" class="main-label">Name</label>
+                                            <input type="text" id="userName" name="userName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="join-form-name">
+                                    <div class="inputContainer">
+                                        <label class="main-label">Age</label>
+                                        <div class="age-wrapper">
+
+                                            <div class="form-group date">
+                                                <select name="userDate" id="userDate">
+                                                    <option value="" disabled="disabled" selected="selected">Date</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group month">
+                                                <select name="userMonth" id="userMonth">
+                                                    <option value="" disabled="disabled" selected="selected">Month</option>
+                                                    <option value="January">January</option>
+                                                    <option value="Fabruary">Fabruary</option>
+                                                    <option value="April">April</option>
+                                                    <option value="May">May</option>
+                                                    <option value="June">June</option>
+                                                    <option value="July">July</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group year">
+                                                <select name="userYear" id="userYear">
+                                                    <option value="" disabled="disabled" selected="selected">Year</option>
+                                                    <option value="1990">1990</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1995">1995</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="join-form-name">
+
+                                    <label for="userCity" class="main-label">City</label>
+                                    <div class="city-wrapper">
+                                        <div class="inputContainer">
+                                            <div class="has-error">
+                                                <div class="form-group">
+                                                    <select id="userCity" name="userCity">
+                                                        <option value="" disabled="disabled" selected="selected">Choose a city</option>
+                                                        <option value="London">London</option>
+                                                        <option value="Paris">Paris</option>
+                                                        <option value="Kyiv">Kyiv</option>
+                                                        <option value="Praga">Praga</option>
+                                                        <option value="Dubai">Dubai</option>
+                                                        <option value="Riga">Riga</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="join-form-checkbox">
+                                    <label class="main-label"></label>
+                                    <div class="square-checkboxs">
+
+                                        <div class="checkbox-wrap">
+                                            <input type="checkbox" value="1" id="cool" name="check" checked />
+                                            <label for="cool"></label>
+                                        </div>
+
+                                        <div class="checkbox-wrap">
+                                            <input type="checkbox" value="2" id="good" name="check"/>
+                                            <label for="good"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="round-checkboxs">
+
+                                        <div class="checkbox-wrap">
+                                            <input type="checkbox" value="3" id="tear" name="check" checked />
+                                            <label for="tear"></label>
+                                        </div>
+
+                                        <div class="checkbox-wrap">
+                                            <input type="checkbox" value="4" id="bear" name="check"/>
+                                            <label for="bear"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input  type="submit" id="submitBtn" value="Start Now" class="start-btn">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="user-list-section">
+
+        <div class="container clearfix">
+
+            <div class="round-img-wrap clearfix">
+                <h2>Code this block</h2>
+                <img src="img/round-girl.png" alt="ALT" class="img-responsive shape">
+                <p>This text should be changeable. Lorem ipsum text here. Offers great opportunities to everyone looking to meet locals, find romantic dates and make new friends. Our dating site gives you hours of dating fun, together with seemingly endless possibilities to meet new single people from your area, make friends, go on a date and enjoy good company. With thousands of local personals, will make your life a whole lot busier with all that dating. This is a great place to find true friends or devoted partners for long-term relationships or marriage. We </p>
+            </div>
+            <div class="user-list-wrap">
+                <h2>Users List</h2>
+
+
+                <div class="slider">
+                    <div class="content">
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+
+                        <div class="slide-item active">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="17px" height="17px">
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="17px" height="19px">
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="17px" height="17px">
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="17px" height="19px">
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/user-girl.jpg" alt="ALT">
+                            <div>
+                                <span>SexyGirl</span>
+                                <a href="#" class="smile"><svg>
+                                    <path fill-rule="evenodd"  opacity="1" fill="rgb(255, 255, 255)"
+                                          d="M11.491,5.547 C10.346,5.547 9.417,7.407 9.417,6.262 C9.417,5.116 10.346,4.188 11.491,4.188 C12.637,4.188 13.565,5.116 13.565,6.262 C13.565,7.407 12.637,5.547 11.491,5.547 ZM5.269,8.336 C4.124,8.336 3.195,7.407 3.195,6.262 C3.195,5.116 4.124,4.188 5.269,4.188 C6.415,4.188 7.343,5.116 7.343,6.262 C7.343,7.407 6.415,8.336 5.269,8.336 ZM5.269,5.225 C4.696,5.225 4.232,5.689 4.232,6.262 C4.232,6.834 4.696,7.299 5.269,7.299 C5.842,7.299 6.306,6.834 6.306,6.262 C6.306,5.689 5.842,5.225 5.269,5.225 ZM8.380,14.558 C6.254,14.558 4.430,13.147 3.629,11.316 L13.131,11.316 C12.330,13.147 10.506,14.558 8.380,14.558 ZM8.380,0.039 C12.962,0.039 16.676,3.754 16.676,8.336 C16.676,12.917 12.962,16.632 8.380,16.632 C3.798,16.632 0.084,12.917 0.084,8.336 C0.084,3.754 3.798,0.039 8.380,0.039 Z"/>
+                                </svg></a>
+                                <a href="#" class="add-user"><svg>
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                          d="M16.038,16.104 L13.649,16.104 L13.649,18.493 L11.261,18.493 L11.261,17.905 C10.409,17.969 9.411,18.009 8.208,18.009 C2.455,18.009 0.998,17.114 0.810,16.623 C0.613,16.109 0.777,11.937 3.809,11.662 C3.809,11.662 6.108,11.345 6.185,9.193 C5.809,8.790 5.514,8.277 5.334,7.694 C5.279,7.711 5.214,7.716 5.138,7.704 C4.804,7.654 4.339,7.029 4.234,6.404 C4.131,5.785 4.422,5.504 4.753,5.446 C4.473,5.013 3.994,0.870 8.201,0.870 C12.210,0.870 11.930,5.013 11.649,5.446 C11.980,5.504 12.271,5.785 12.168,6.404 C12.064,7.029 11.599,7.654 11.265,7.704 C11.188,7.716 11.123,7.711 11.068,7.694 C10.890,8.269 10.601,8.777 10.232,9.178 C10.249,9.751 10.428,10.188 10.675,10.530 L10.464,10.530 L10.464,12.919 L8.075,12.919 L8.075,16.901 L10.464,16.901 L10.464,17.697 L11.261,17.697 L11.261,16.104 L8.872,16.104 L8.872,13.715 L11.261,13.715 L11.261,11.326 L13.649,11.326 L13.649,13.715 L16.038,13.715 L16.038,16.104 ZM15.242,17.016 L15.242,16.901 L15.379,16.901 C15.335,16.939 15.301,16.977 15.242,17.016 Z"/>
+                                </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="left icon-arrow-back"></div>
+                        <div class="right icon-arrow-forward"></div>
+                        <ul class="indicators"></ul>
+                    </div>
+                </div>
+
+
+                <section>
+                    <div class="tabs tabs-style-shape">
+                        <nav>
+                            <ul class="clearfix">
+                                <li>
+                                    <a href="#section-shape-1">
+                                        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+                                        <span>User List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#section-shape-2">
+                                        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+                                        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+                                        <span>Active list tab <b style="color: #969696; font-weight: 300">| 38</b></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="content-wrap">
+
+                            <section id="section-shape-1">
+                                <p>USER LIST TAB</p>
+                            </section>
+
+                            <section id="section-shape-2" class="clearfix ">
+                                <div class="left-shape">
+
+                                    <div id="rangeInfo" se-min="0" se-step="1" se-max="100" class="slider-range">
+                                        <div class="slider-touch-left">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-touch-right">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-line">
+                                            <span></span>
+                                        </div>
+                                        <div id="result">100%</div>
+                                    </div>
+
+                                    <ol class="cd-breadcrumb triangle clearfix">
+                                        <li class="gray"><svg width="54px" height="32px">
+                                            <defs>
+                                                <filter id="Filter_0">
+                                                    <feFlood flood-color="rgb(130, 130, 130)" flood-opacity="0.4" result="floodOut" />
+                                                    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                                </filter>
+                                                <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="rgb(230,230,230)" stop-opacity="1" />
+                                                    <stop offset="100%" stop-color="rgb(245,250,251)" stop-opacity="1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path stroke-width="1px" stroke="rgb(0, 0, 0)" fill="url(#PSgrad_0)"
+                                                  d="M52.233,17.869 C51.738,18.377 48.148,24.558 46.008,28.021 C45.729,28.761 45.342,29.353 44.891,29.768 C44.710,30.034 44.572,30.220 44.492,30.297 C44.226,30.555 43.923,30.553 43.672,30.361 C43.614,30.367 43.559,30.391 43.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 L43.500,2.500 C43.637,2.500 43.769,2.539 43.901,2.570 C44.095,2.517 44.307,2.564 44.520,2.777 C44.539,2.796 44.566,2.830 44.598,2.873 C45.282,3.344 45.835,4.242 46.165,5.376 C48.241,8.820 51.576,14.514 52.233,15.177 C52.842,15.791 52.831,17.254 52.233,17.869 Z"/>
+                                        </svg><a href="#0">Step 1</a></li>
+                                        <li class="gray"><svg width="54px" height="32px">
+                                            <defs>
+                                                <filter id="Filter_0">
+                                                    <feFlood flood-color="rgb(130, 130, 130)" flood-opacity="0.4" result="floodOut" />
+                                                    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                                </filter>
+                                                <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="rgb(230,230,230)" stop-opacity="1" />
+                                                    <stop offset="100%" stop-color="rgb(245,250,251)" stop-opacity="1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path stroke-width="1px" stroke="rgb(0, 0, 0)" fill="url(#PSgrad_0)"
+                                                  d="M52.233,17.869 C51.738,18.377 48.148,24.558 46.008,28.021 C45.729,28.761 45.342,29.353 44.891,29.768 C44.710,30.034 44.572,30.220 44.492,30.297 C44.226,30.555 43.923,30.553 43.672,30.361 C43.614,30.367 43.559,30.391 43.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 L43.500,2.500 C43.637,2.500 43.769,2.539 43.901,2.570 C44.095,2.517 44.307,2.564 44.520,2.777 C44.539,2.796 44.566,2.830 44.598,2.873 C45.282,3.344 45.835,4.242 46.165,5.376 C48.241,8.820 51.576,14.514 52.233,15.177 C52.842,15.791 52.831,17.254 52.233,17.869 Z"/>
+                                        </svg><a href="#0">Step 2</a></li>
+                                        <li class="accent"><svg width="54px" height="32px">
+                                            <defs>
+                                                <filter id="Filter_0">
+                                                    <feFlood flood-color="rgb(130, 130, 130)" flood-opacity="0.4" result="floodOut" />
+                                                    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                                </filter>
+                                                <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="rgb(230,230,230)" stop-opacity="1" />
+                                                    <stop offset="100%" stop-color="rgb(245,250,251)" stop-opacity="1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path stroke-width="1px" stroke="rgb(0, 0, 0)" fill="url(#PSgrad_0)"
+                                                  d="M52.233,17.869 C51.738,18.377 48.148,24.558 46.008,28.021 C45.729,28.761 45.342,29.353 44.891,29.768 C44.710,30.034 44.572,30.220 44.492,30.297 C44.226,30.555 43.923,30.553 43.672,30.361 C43.614,30.367 43.559,30.391 43.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 L43.500,2.500 C43.637,2.500 43.769,2.539 43.901,2.570 C44.095,2.517 44.307,2.564 44.520,2.777 C44.539,2.796 44.566,2.830 44.598,2.873 C45.282,3.344 45.835,4.242 46.165,5.376 C48.241,8.820 51.576,14.514 52.233,15.177 C52.842,15.791 52.831,17.254 52.233,17.869 Z"/>
+                                        </svg><a href="#0">Step 3</a></li>
+                                        <li><svg width="54px" height="32px">
+                                            <defs>
+                                                <filter id="Filter_0">
+                                                    <feFlood flood-color="rgb(130, 130, 130)" flood-opacity="0.4" result="floodOut" />
+                                                    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                                </filter>
+                                                <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="rgb(230,230,230)" stop-opacity="1" />
+                                                    <stop offset="100%" stop-color="rgb(245,250,251)" stop-opacity="1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path stroke-width="1px" stroke="rgb(0, 0, 0)" fill="url(#PSgrad_0)"
+                                                  d="M52.233,17.869 C51.738,18.377 48.148,24.558 46.008,28.021 C45.729,28.761 45.342,29.353 44.891,29.768 C44.710,30.034 44.572,30.220 44.492,30.297 C44.226,30.555 43.923,30.553 43.672,30.361 C43.614,30.367 43.559,30.391 43.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 L43.500,2.500 C43.637,2.500 43.769,2.539 43.901,2.570 C44.095,2.517 44.307,2.564 44.520,2.777 C44.539,2.796 44.566,2.830 44.598,2.873 C45.282,3.344 45.835,4.242 46.165,5.376 C48.241,8.820 51.576,14.514 52.233,15.177 C52.842,15.791 52.831,17.254 52.233,17.869 Z"/>
+                                        </svg><a href="#0">Step 4</a></li>
+                                        <li>
+                                            <svg width="54px" height="32px">
+                                                <defs>
+                                                    <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                                                        <stop offset="0%" stop-color="rgb(230,230,230)" stop-opacity="1" />
+                                                        <stop offset="100%" stop-color="rgb(245,250,251)" stop-opacity="1" />
+                                                    </linearGradient>
+
+                                                </defs>
+                                                <path fill-rule="evenodd"  fill="rgb(255, 212, 13)"
+                                                      d="M5.500,2.500 L48.500,2.500 C50.157,2.500 51.500,4.841 51.500,7.729 L51.500,25.161 C51.500,28.050 50.157,30.391 48.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 Z"/>
+                                                <path stroke-width="1px" stroke="rgb(0, 0, 0)" fill="url(#PSgrad_0)"
+                                                      d="M5.500,2.500 L48.500,2.500 C50.157,2.500 51.500,4.841 51.500,7.729 L51.500,25.161 C51.500,28.050 50.157,30.391 48.500,30.391 L5.500,30.391 C3.843,30.391 2.500,28.050 2.500,25.161 L2.500,7.729 C2.500,4.841 3.843,2.500 5.500,2.500 Z"/>
+                                            </svg>
+                                            <a href="#0">Step 5</a>
+                                        </li>
+                                    </ol>
+
+                                    <div id="my-slider" se-min="0" se-step="1" se-max="100" class="slider-range">
+                                        <div class="slider-touch-left">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-touch-right">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="right-shape">
+                                    <div class="pie-diagram" id="pie-diagram"></div>
+
+                                    <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                    </fieldset>
+                                </div>
+
+                            </section>
+                        </div><!-- /content -->
+                    </div><!-- /tabs -->
+                </section>
+            </div>
+        </div>
+
+</section>
+
+<section class="dating-section">
+
+        <div class="container">
+            <h2>How to succeed in online dating</h2>
+            <div class="element">
+                <p>
+                    There is no secret to being successful in online dating - you just need to be yourself. Be active, comment on other members' profiles, send them mails, chat with them and rate their profiles. We provide a wide range of features allowing you to gather as many contacts as you can handle. It is better to rotate photographs of yourself regularly, update the details on your profile frequently, use the instant communicator facility, and log onto the site as much as possible, as well as at different times, to meet as many members as you can. It is most important to be honest, positive and patient in all your site activities.
+                </p>
+
+                <p class="accent">
+                    In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+                </p>
+
+                <p>
+                    You can also upload photos to your dating profile from your Facebook account.
+                </p>
+
+                <ol>
+                    <li>Access your dating life even when you’re not browsing <a href="#" class="accent-link">Cupid.com!</a></li>
+                    <li>Search for new matches from your browser easily</li>
+                    <li>Read and write messages & chat with members live; receive Datecasts, winks and alerts when your live; receive Datecasts, winks and alerts when your </li>
+                    <li>Read and write messages & chat with members live; receive Datecasts, winks and alerts when your friends</li>
+                </ol>
+
+                <p class="italic">
+                    In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then be prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+                </p>
+
+                <a href="#" class="view-more">Click here to view more</a>
+
+            </div>
+        </div>
+
+</section>
+
+<footer class="footer">
+
+        <div class="container">
+            <div class="footer-wrap clearfix">
+                <div class="footer-logo">
+                    <img src="img/logo-footer.png" alt="WEBCODER">
+                </div>
+                <div class="footer-info">
+                    <p><span>VD </span> Web Coder Test  Task</p>
+                    <span class="year">2013</span>
+                </div>
+            </div>
+        </div>
+
+</footer>
+
+<svg class="hidden">
+    <defs>
+        <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+    </defs>
+</svg>
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

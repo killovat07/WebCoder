@@ -1,0 +1,166 @@
+//DATING SECTION
+
+
+.element {
+  padding: 0 0 52px 0;
+  background-color: white;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 8px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 8px; /* Firefox */
+  column-gap: 8px;
+
+  //text-align: justify;
+  p.italic{
+    font-style: italic;
+    line-height: 16px;
+    padding: 0 25px 0 20px;
+    margin-top: 28px;
+    margin-bottom: 26px;
+    position: relative;
+    color: #9a9a9a;
+
+    &:before{
+      content: '\e80c';
+      font-family: 'webcoder';
+      font-size: 22px;
+      color: #cfcfcf;
+      display: block;
+      position: absolute;
+      left: -5px;
+      top: 0px;
+
+    }
+    &:after{
+      content: '\e80b';
+      font-family: 'webcoder';
+      font-size: 22px;
+      color: #cfcfcf;
+      display: block;
+      position: absolute;
+      right: 6px;
+      bottom: -5px;
+    }
+  }
+  p.accent{
+    position: relative;
+    line-height: 16px;
+    color: $accent;
+    padding-left: 20px;
+    margin-bottom: 24px;
+    display: table;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: $accent;
+      left: 0;
+      top: 0;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: $accent;
+      left: 0;
+      top: 0;
+    }
+  }
+  p{
+    font-size: em(14px);
+    font-weight: 300;
+    line-height: 22px;
+    color: $black;
+    margin: 0 16px 15px 0;
+  }
+  ol{
+    display: block;
+    margin: 0 16px 0 0;
+    padding: 5px 0 0 0;
+    list-style: none;
+    counter-reset: li;
+    li{
+      display: block;
+      counter-increment: li;
+      font-size: em(14px);
+      line-height: 22px;
+      color: $black;
+      font-weight: 300;
+      margin-bottom: 5px;
+      &:before {
+        content: counter(li)'.';
+        font-size: em(11px);
+        color: #a3a3a3;
+        display: inline-block;
+        width: 1.4em;
+        font-weight: 400;
+      }
+    }
+  }
+  .view-more{
+    display: table;
+    float: right;
+    font-size: em(14px);
+    line-height: 18px;
+    color: $gray;
+    font-weight: 300;
+    color: $accent;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: .25s ease;
+    &:after{
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+      display: block;
+      margin-top: -1px;
+      -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      transform: scaleX(1);
+      transition: .25s ease;
+    }
+    &:before{
+      content: '\e80a';
+      display: block;
+      font-family: 'webcoder';
+      font-size: 12px;
+      position: absolute;
+      left: -15px;
+      top: 1px;
+      transition: .25s ease;
+    }
+    &:hover{
+      color: darken($accent, 10%);
+      &:before{
+        color: darken($accent, 10%);
+      }
+      &:after {
+        -webkit-transform:scaleX(0);
+        -ms-transform:scaleX(0);
+        transform:scaleX(0);
+      }
+    }
+  }
+}
+/* change the screen size however you want */
+
+@media screen and (max-width: 30em) {
+  .element {
+    /* change the column count here */
+  }
+}
+
+
+
+
+
+
+

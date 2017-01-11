@@ -1,0 +1,578 @@
+//************shape-outside img
+.user-list-section{
+  h2{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: $black;
+  }
+  .round-img-wrap{
+    float: left;
+    width: 49%;
+    p{
+      margin: 0;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: justify;
+      color: $black;
+    }
+    .shape{
+      display: block;
+      border-radius: 50%;
+      -webkit-shape-outside: circle();
+      shape-outside: circle();
+      float: left;
+      margin-right: 12px;
+      margin-top: 5px;
+    }
+  }
+  .user-list-wrap{
+    float: right;
+    width: 51%;
+    padding-left: 8.2%;
+  }
+}
+//************ shape-outside img END ********
+
+
+//***************MULTI SLIDER*****************
+
+.slider{
+  margin-bottom: 20px;
+  .content{
+    position: relative;
+    overflow: hidden;
+  }
+  position: relative;
+  z-index: 10;
+
+  .slide-item{
+    position: absolute;
+    width: 72px;
+    top: 0;
+    left: -20.5%;
+    transition: .5s ease;
+    line-height: normal;
+    &:before{
+      content: '';
+      box-shadow: inset 0 0 3px 1px rgba(0,0,0,.3);
+      display: block;
+      position: absolute;
+      width: 72px;
+      height: 72px;
+    }
+    div{
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0, .4);
+      width: 100%;
+      height: 100%;
+      transition: .35s ease;
+      span{
+        color: #fff;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        transition: .35s ease;
+        display: block;
+        opacity: 0;
+      }
+      a{
+        transition: .25s ease;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        svg{
+          transition: .25s ease;
+          opacity: .5;
+        }
+      }
+      a.smile{
+        display: block;
+        position: absolute;
+        top: 44px;
+        left: 0px;
+        width: 17px;
+        height: 17px;
+        &:hover{
+          svg{
+            opacity: 1;
+          }
+        }
+      }
+      a.add-user{
+        display: block;
+        position: absolute;
+        top: 43px;
+        right: 0;
+        width: 17px;
+        height: 17px;
+        &:hover{
+          svg{
+
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &:hover{
+      div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, .4);
+        width: 100%;
+        height: 100%;
+        transition: .15s ease;
+        opacity: 1;
+        span{
+          color: #fff;
+          position: absolute;
+          font-weight: 200;
+          font-size: 16px;
+          text-align: center;
+          display: block;
+          width: 100%;
+          top: 16px;
+          opacity: 1;
+        }
+        a{
+          opacity: 1;
+        }
+        a.smile{
+          display: block;
+          position: absolute;
+          top: 44px;
+          left: 16px;
+          width: 17px;
+          height: 17px;
+        }
+        a.add-user{
+          display: block;
+          position: absolute;
+          top: 43px;
+          right: 16px;
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .slide-item.active{
+    left: 0;
+    position: relative;
+  }
+  .slide-item.active + .slide-item{
+    left: 82px;
+    position: absolute;
+  }
+  .slide-item.active + .slide-item + .slide-item{
+    position: absolute;
+    left: 164px;
+  }
+  .slide-item.active + .slide-item + .slide-item + .slide-item{
+    position: absolute;
+    left: 246px;
+  }
+  .slide-item.active + .slide-item + .slide-item + .slide-item + .slide-item{
+    position: absolute;
+    left: 328px;
+    & ~ .slide-item{
+      left: 100%;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  .indicators{
+    display: none;
+  }
+  .controls{
+    .left, .right{
+      width: 26px;
+      height: 20px;
+      font-size: 20px;
+      line-height: 20px;
+      position: absolute;
+      top: 30px;
+      cursor: pointer;
+    }
+    .left{
+      left: -34px;
+    }
+    .right{
+      right: -24px;
+    }
+
+  }
+}
+
+//**********MULTISLIDER END**********
+
+
+/* **************** TABS ******* */
+
+.tabs-style-shape nav ul li.tab-current {
+  z-index: 100;
+}
+
+.tabs-style-shape nav li a {
+  overflow: visible;
+}
+
+.tabs-style-shape nav li a svg {
+  position: absolute;
+  left: 85%;
+  margin: 0;
+  width: 2.5em;
+  height: 100%;
+  fill: #f8f8f8;
+  stroke-dasharray: 110,59,100;
+  stroke: #ddd;
+  stroke-width: 2px;
+}
+
+.tabs-style-shape nav li a svg:nth-child(2),
+.tabs-style-shape nav li:last-child a svg {
+  left: 128px;
+}
+
+.tabs-style-shape nav li a span {
+  font-weight: 300;
+  border-radius: 10px 0 0 0;
+  color: #969696;
+  box-shadow: inset 2px 0px 1px 1px #ddd;
+  /*border: 1px solid #ddd;
+  border-right: 0;*/
+  display: block;
+  overflow: hidden;
+  padding: 0.2em 0;
+  background-color: #f8f8f8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 0;
+  position: relative;
+}
+
+.tabs-style-shape nav li a:hover span {
+  transition: .25s ease;
+  color: $accent;
+  z-index: 0;
+}
+
+/* Make only shape clickable */
+.tabs-style-shape nav li a svg {
+  pointer-events: none;
+}
+
+.tabs-style-shape nav li a svg use {
+  pointer-events: auto;
+}
+
+.tabs-style-shape nav li.tab-current a span,
+.tabs-style-shape nav li.tab-current a svg {
+  color: $accent;
+  stroke-dasharray: 110,130,100;
+}
+
+.tabs-style-shape nav li.tab-current a span {
+  background: #fff;
+  box-shadow: inset 2px 1px 1px 0px #ddd;
+  z-index: 1;
+}
+
+.tabs-style-shape nav li.tab-current a svg {
+  fill: #fff;
+}
+
+.tabs {
+  position: relative;
+  margin: 0;
+  width: 390px;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.tabs nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs nav ul li {
+  top: 1px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  float: left;
+  width: 80px;
+  &:nth-child(2){
+    width: 140px;
+    margin-left: 10px;
+  }
+}
+
+.tabs nav a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: .25s ease;
+}
+
+.tabs nav a span {
+  vertical-align: middle;
+  font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+  color: #74777b;
+}
+
+.tabs nav a:focus {
+  outline: none;
+}
+/* **************** TABS END******* */
+
+/* **************** TABS CONTENT******* */
+.content-wrap {
+  position: relative;
+  top: 0px;
+  border: 1px solid #ddd;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 2px 2px 4px 0px #ddd, inset 1px -2px 1px 0px #ddd;
+}
+
+.content-wrap section {
+  .left-shape{
+    float: left;
+    width: 215px;
+
+    #rangeValue{
+      margin-top: 22px;
+    }
+  }
+  .right-shape{
+    float: right;
+    width: calc(100% - 215px);
+  }
+  padding: 5px 20px 10px;
+  display: none;
+  margin: 0 auto;;
+  text-align: center;
+  min-height: 150px;
+
+}
+
+.content-wrap section.content-current {
+  display: block;
+}
+
+.content-wrap section p {
+  margin: 30px 0 0;
+  color: rgba(40,44,42,0.3);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+}
+.pie-diagram{
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  span{
+    position: absolute;
+    left: 30px;
+    top: 27px;
+    color: #4e4e4e;
+  }
+  width: 90px;
+  height: 90px;
+}
+
+/* **************** STEPS STYLE ******* */
+
+.cd-breadcrumb{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  svg{
+    path{
+      stroke: #a2a2a2!important;
+
+    }
+  }
+  li.gray{
+    svg{
+      path{
+        fill: #c3c5c5;
+      }
+    }
+  }
+  li.accent{
+    svg{
+      path{
+        fill: $accent-dark;
+      }
+    }
+  }
+  li{
+    margin: 0;
+    position: relative;
+    padding: 0;
+    display: block;
+    float: left;
+    width: 54px;
+    height: 32px;
+    margin-left: -14px;
+    transition: .45s ease;
+    &:first-child{
+      margin-left: 0;
+      z-index: 4;
+      a{
+        left: 10px;
+        text-align: center;
+      }
+    }
+    &:nth-child(2){
+      z-index: 3;
+    }
+    &:nth-child(3){
+      z-index: 2;
+    }
+    &:nth-child(4){
+      z-index: 1;
+    }
+    &:last-child{
+      z-index: 0;
+    }
+    a{
+      position: absolute;
+      top: 0;
+      right: 1px;
+      display: block;
+      height: 32px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 32px;
+      text-align: right;
+      padding-right: 10px;
+      color: #4e4e4e;
+      text-shadow: 1px 1px 1px #dcdcdc;
+    }
+  }
+}
+
+/****** Star Rating *****/
+
+.rating {
+  border: none;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin-left: 2px;
+  font-size: 17px;
+  font-family: 'webcoder';
+  display: inline-block;
+  content: "\e809";
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+  transition: .25s ease;
+}
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: $accent-dark;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: lighten($accent-dark, 10%);  }
+
+/****** MULTI RANGE_SLIDER *****/
+#my-slider{
+  margin-top: 5px;
+}
+#rangeInfo{
+  margin-bottom: 18px;
+  .slider-touch-left{
+    opacity: 0;
+  }
+}
+#result{
+  font-weight: 400;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px #dcdcdc;
+  position: relative;
+  display: block;
+  z-index: 0;
+  line-height: 48px;
+  color: $black;
+}
+.slider-range {
+  display: block;
+  position: relative;
+  height: 36px;
+  width: 215px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+
+  .slider-touch-left, .slider-touch-right {
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 26px;
+    padding: 12px 0;
+    z-index: 2;
+    cursor: pointer;
+    span {
+      width: 14px;
+      height: 26px;
+      background-image: url('../img/range-button.png');
+      background-repeat: no-repeat;
+      display: block;
+    }
+  }
+
+  .slider-line {
+    position: absolute;
+    width: calc(100% - 6px);
+    left: 0px;
+    top: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #D3D3D3;
+    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+    border-radius: 4px;
+    background: linear-gradient(180deg,#F5F9FA,#F0F3F3,#E7E7E8);
+    padding: 1px 0 1px 0;
+    z-index: 0;
+    span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(180deg, #FFA101, #FF9610, #FF8920);
+    }
+  }
+}
+
+

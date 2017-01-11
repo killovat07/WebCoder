@@ -1,0 +1,118 @@
+@import "bourbon";
+@import "vars";
+@import "web-fonts";
+@import "join-section";
+@import "user-list-section";
+@import "dating-section";
+
+input{
+  outline: none!important;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-input-placeholder{
+	color: #666;
+	opacity: 1;
+}
+
+
+*:-moz-placeholder{
+	color: #666;
+	opacity: 1;
+}
+
+
+*::-moz-placeholder{
+	color: #666;
+	opacity: 1;
+}
+
+
+*:-ms-input-placeholder{
+	color: #666;
+	opacity: 1;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  min-width: 1170px;
+  position: relative;
+  line-height: 1.75;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto 0;
+}
+.fixed-width{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+//header
+
+.header{
+  img{
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+
+//footer
+
+.footer-wrap{
+  padding: 10px 0;
+  border-top: 1px solid $gray-light;
+  .footer-logo{
+    float: left;
+    img{
+      width: 112px;
+      display: block;
+      margin-left: 0;
+      padding: 10px 0;
+    }
+  }
+  .footer-info{
+    float: right;
+    .year{
+      display: block;
+      text-align: right;
+      font-size: 31px;
+      line-height: 31px;
+      font-weight: 300;
+      color: $gray-light;
+    }
+    p{
+      margin: 0;
+      font-size: 20px;
+      color: $black;
+      font-weight: 300;
+      span{
+        color: $gray-light;
+      }
+    }
+  }
+
+}
